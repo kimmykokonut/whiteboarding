@@ -1,0 +1,22 @@
+//determines el in str unique. 
+//no array or array methods
+//return boolean
+Input: "hello" (string)
+Output: false (boolean)
+
+function uniqueStr(str){
+	if (typeof str !== 'string'){
+  	return `Error! You entered a ${typeof str}, you need to enter a string.`
+    }
+  for (let i=0; i < str.length; i++) {
+  	for (let j=i+1; j < str.length; j++) {
+    	if (str[i] === str[j]){
+      	return false;
+      }
+    }
+  }
+  return true;
+}
+
+const answer = uniqueStr('hello');
+console.log(answer) //false
